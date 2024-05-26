@@ -1,73 +1,49 @@
 {% include head.html %}
-
-<div class="section start-of-page gradient">
-    <div class="container pages">
-      <div class="section-header">
-        <div class="heading-jumbo-small session-detail-page w-clearfix w-dyn-bind-empty"></div>
-        <div class="session-metadata">
-          <div class="session-type w-dyn-bind-empty"></div>
-          <div class="w-dyn-list">
-            <div role="list" class="w-dyn-items">
-              <div role="listitem" class="w-dyn-item">
-                <div class="text-block-16 w-dyn-bind-empty"></div>
-              </div>
-            </div>
-            <div class="w-dyn-empty">
-              <div>No items found.</div>
-            </div>
-          </div>
-        </div>
-        <div class="div-block-25">
-          <div class="date-format w-dyn-bind-empty"></div>
-          <div class="date-format">, </div>
-          <div class="date-format w-dyn-bind-empty"></div>
-          <div class="date-format"> </div>
-          <div class="date-format w-dyn-bind-empty"></div>
-          <div class="date-format">th, </div>
-          <div class="date-format w-dyn-bind-empty"></div>
-          <div class="date-format"> - </div>
-          <div class="date-format w-dyn-bind-empty"></div>
-        </div>
-        <div class="div-block-25">
-          <a href="#" class="w-inline-block">
-            <div class="discord-link">join the discussion on discord</div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="circle-container-below">
-      <div class="circle lens header"></div>
-    </div>
-  </div>
-  <div class="section white">
-    <div class="container-pages w-container">
-      <div class="narrow-page">
-        <div class="rich-text-section session-detail w-dyn-bind-empty w-richtext"></div>
-        <div class="collection-list-wrapper-3 w-dyn-list">
-          <div role="list" class="w-dyn-items">
-            <div role="listitem" class="w-dyn-item">
-              <div class="speaker-card-bio">
-                <div class="speaker-card-name-bio">
-                  <div class="avatar-container"><img src="" loading="lazy" alt="" class="avatar-image w-dyn-bind-empty"></div>
-                  <h3 class="heading-4 w-dyn-bind-empty"></h3>
-                  <div class="speaker-card-title-and-org">
-                    <div class="speaker-card-title w-dyn-bind-empty"></div>
-                  </div>
+<!-- header END -->
+            <div class="section start-of-page gradient">
+                <div class="container pages">
+                    <div class="section-header">
+                        <div class="heading-jumbo-small session-detail-page w-clearfix">{{ page.title }}</div>
+                        <div class="session-metadata">
+                            <div class="session-type">Talk</div>
+                            <div class="w-dyn-list">
+                                <div role="list" class="w-dyn-items">
+                                    <div role="listitem" class="w-dyn-item">
+                                        <div class="text-block-16">{{ page.speaker }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div-block-25">
+                            <div class="date-format">Tuesday</div>
+                            <div class="date-format">, </div>
+                            <div class="date-format">April</div>
+                            <div class="date-format"> </div>
+                            <div class="date-format">25</div>
+                            <div class="date-format">th, </div>
+                            <div class="date-format">14:15</div>
+                            <div class="date-format"> - </div>
+                            <div class="date-format">14:30</div>
+                        </div>
+                        <div class="div-block-25"><a href="{{ page.discord-link }}"
+                                target="_blank" class="w-inline-block">
+                                <div class="discord-link">join the discussion on discord</div>
+                            </a></div>
+                    </div>
                 </div>
-                <div class="speaker-card-presentation-bio">
-                  <div class="rich-text-section bio w-dyn-bind-empty w-richtext"></div>
+                <div class="circle-container-below">
+                    <div class="circle lens header"></div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="w-dyn-empty">
-            <div>No items found.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+            <div class="section white">
+                <div class="container-pages w-container">
+                    <div class="narrow-page">
+                        <!-- content BEGIN -->
+                        {{ content }}
+                        <!-- content END -->
+                    </div>
+                </div>
+            </div>
 
-{{ content }}
-
+<!-- footer BEGIN -->
 {% include footer.html %}

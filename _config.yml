@@ -33,3 +33,13 @@ theme: null
 # plugins:
 #  - jekyll-feed
 
+collections:
+  sessions:
+    output: true
+    permalink: "/sessions/:slug/"
+
+defaults:
+  - scope:
+      path: "_sessions/*"
+    values:
+      layout: "sessions"
