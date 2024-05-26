@@ -15,15 +15,13 @@
                             </div>
                         </div>
                         <div class="div-block-25">
-                            <div class="date-format">Tuesday</div>
+                            <div class="date-format">{{ page.talk-date | date: "%A"}}</div>
                             <div class="date-format">, </div>
-                            <div class="date-format">April</div>
+                            <div class="date-format">{{ page.talk-date | date: "%B"}}</div>
                             <div class="date-format"> </div>
-                            <div class="date-format">25</div>
+                            <div class="date-format">{{ page.talk-date | date: "%d"}}</div>
                             <div class="date-format">th, </div>
-                            <div class="date-format">14:15</div>
-                            <div class="date-format"> - </div>
-                            <div class="date-format">14:30</div>
+                            <div class="date-format">{{ page.talk-date | date: "%R"}}</div>
                         </div>
                         <div class="div-block-25"><a href="{{ page.discord-link }}"
                                 target="_blank" class="w-inline-block">
